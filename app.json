@@ -33,7 +33,7 @@
           "data": [
             {
               "scheme": "https",
-              "host": "markertrax-player-apps.stn-uat.markertrax.com",
+              "host": "*.markertrax.com",
               "pathPrefix": "/"
             }
           ],
