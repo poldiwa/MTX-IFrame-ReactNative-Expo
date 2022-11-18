@@ -26,23 +26,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.poldiwa.MTXIFrame",
-      "intentFilters": [
-        {
-          "action": "VIEW",
-          "data": [
-            {
-              "scheme": "iframe",
-              "host": "mtx",
-              "pathPrefix": "/"
-            }
-          ],
-          "category": [
-            "BROWSABLE",
-            "DEFAULT"
-          ]
-        }
-      ]
+      "package": "com.poldiwa.MTXIFrame"
     },
     "web": {
       "favicon": "./assets/favicon.png"
