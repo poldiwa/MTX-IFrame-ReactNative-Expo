@@ -17,6 +17,11 @@ export default function App() {
         if (postMessage.type == "POST_MESSAGE") {
           webViewRef.current.injectJavaScript(`window.postMessage(${JSON.stringify(postMessage.data)});`);
         }
+        
+        // yodlee and ninja
+        if (postMessage.type == "OPEN_EXTERNAL_URL" || postMessage.event == "open_url") {
+          Linking.openURL(postMessage.url || postMessage.data.url)
+        }
 
         // we'll do something what yodlee do and check for ReactNativeWebview and postmessage with it
         // so you dont have to convert the events, 
