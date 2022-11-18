@@ -1,6 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import { useRef } from 'react';
-import { SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Linking } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 export default function App() {
@@ -9,7 +8,7 @@ export default function App() {
     <WebView
       onMessage={(event) => {
         let postMessage = JSON.parse(event.nativeEvent.data)
-
+        console.log(postMessage)
         // looks like yodlee is directly sending it to the ReactNativeWebview 
         // can be something we can tell to yodlee but we can just relay it for now
 
@@ -39,7 +38,7 @@ export default function App() {
         }
       }}
       ref={webViewRef}
-      source={{ uri: 'https://markertrax-player-apps.stn-uat.markertrax.com/7/1001/dashboard/?linkedId=ABFXBVFD2NBQKJYDUKHHMPBBK6SNHR' }}
+      source={{ uri: 'http://192.168.1.119:4200/7/1001/dashboard/?linkedId=7HT9UKXG2MMCZV9ZKTEEVFSPR5KV8R' }}
     />
   );
 }
