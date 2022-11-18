@@ -32,8 +32,8 @@
           "action": "VIEW",
           "data": [
             {
-              "scheme": "https",
-              "host": "*.markertrax.com",
+              "scheme": "iframe",
+              "host": "mtx",
               "pathPrefix": "/"
             }
           ],
