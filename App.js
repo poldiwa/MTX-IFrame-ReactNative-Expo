@@ -16,7 +16,7 @@ export default function App() {
         if (postMessage.type == "POST_MESSAGE") {
           webViewRef.current.injectJavaScript(`window.postMessage(${JSON.stringify(postMessage.data)});`);
         }
-        
+
         // yodlee and ninja
         if (postMessage.type == "OPEN_EXTERNAL_URL" || postMessage.event == "open_url") {
           Linking.openURL(postMessage.url || postMessage.data.url)
@@ -38,7 +38,9 @@ export default function App() {
         }
       }}
       ref={webViewRef}
-      source={{ uri: 'http://192.168.1.119:4200/7/1001/dashboard/?linkedId=7HT9UKXG2MMCZV9ZKTEEVFSPR5KV8R' }}
+      // source={{ uri: 'http://192.168.1.154:4200/7/1001/dashboard/?linkedId=7HT9UKXG2MMCZV9ZKTEEVFSPR5KV8R' }}
+      source={{ uri: 'https://www.morongoquikcash.com/' }}
+      // source={{ uri: 'http://192.168.1.154:4200/7/1004/dashboard/?linkedId=WQFH9GTSRMG8R7MDPPUKAD3HRU4JN4' }}
     />
   );
-}
+} 
